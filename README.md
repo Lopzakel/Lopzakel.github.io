@@ -150,7 +150,11 @@ personal-site/
 
 ### GitHub Pages
 
-1. 新建仓库，把本目录的文件推到 `main` 分支根目录（`index.html` 要在根目录）。
+站点已部署在 **https://lopzakel.github.io/**，仓库是 `Lopzakel/Lopzakel.github.io`，`main` 分支根目录直接发布。
+
+如果要重新部署：
+
+1. 把本目录的文件推到 `main` 分支根目录（`index.html` 要在根目录）。
 2. 仓库 **Settings → Pages → Build and deployment**，Source 选 `Deploy from a branch`，分支选 `main`、目录选 `/ (root)`，保存。
 3. 一两分钟后访问 `https://<用户名>.github.io/<仓库名>/`。
 4. 如果仓库名是 `<用户名>.github.io`，地址就是 `https://<用户名>.github.io/`。
@@ -178,4 +182,4 @@ personal-site/
 
 ## 许可
 
-随意修改和使用。邮箱、社交链接和项目进度仍是占位，发布前请替换成你自己的。
+随意修改和使用。项目进度和技能等级按实际情况更新即可。
