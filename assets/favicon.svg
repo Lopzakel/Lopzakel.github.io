@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#17160f"/>
+  <rect x="12" y="12" width="40" height="40" rx="5" fill="#cf4f22"/>
+  <text x="32" y="41.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="17" font-weight="700" letter-spacing="-1" fill="#f4f1ea">MQH</text>
+</svg>

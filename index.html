@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>毛祺浩 · 计算机系学生 / Mao Qihao</title>
+  <meta name="description" content="毛祺浩，四川传媒学院计算机系大一学生。正在学 C、Python 和 UE5，做 VR 开发；寻找 2027 年暑期实习。">
+  <meta name="author" content="毛祺浩">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f4f1ea">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="毛祺浩 · 计算机系学生">
+  <meta property="og:description" content="大一，正在学 C、Python 和 UE5，做 VR 开发。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- 在渲染前确定主题，避免深色模式闪白 -->
+  <script>
+    (function () {
+      var theme;
+      try { theme = localStorage.getItem('theme'); } catch (e) {}
+      if (theme !== 'light' && theme !== 'dark') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.classList.add('js');
+      var themeMeta = document.querySelector('meta[name="theme-color"]');
+      if (themeMeta) {
+        themeMeta.setAttribute('content', theme === 'dark' ? '#12110d' : '#f4f1ea');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <!-- ===================== 导航 ===================== -->
+  <header class="nav" id="nav">
+    <div class="wrap nav__inner">
+      <a class="brand" href="#top" aria-label="回到首页">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">毛祺浩</span>
+        <span class="brand__en">/ MQH</span>
+      </a>
+
+      <nav class="nav__links" aria-label="主导航">
+        <a href="#about">关于</a>
+        <a href="#projects">项目</a>
+        <a href="#skills">技能</a>
+        <a href="#contact">联系</a>
+      </nav>
+
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换到深色模式" title="切换主题">
+        <svg class="icon icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+        </svg>
+        <svg class="icon icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2"/>
+          <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===================== 首屏 ===================== -->
+    <section class="hero" id="top">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow reveal">
+            <span class="pulse" aria-hidden="true"></span>
+            2027 暑期实习 · 开放中
+          </p>
+
+          <h1 class="hero__title reveal" style="--i:1">
+            毛祺浩<span class="hero__dot" aria-hidden="true"></span>
+            <span class="hero__en">Mao Qihao — 计算机系学生</span>
+          </h1>
+
+          <p class="hero__lede reveal" style="--i:2">
+            我在四川传媒学院读计算机系，大一。刚进大学，正在把 C、Python 和数学基础打牢；最近在学 UE5，想做一个能走进去的 VR 场景。
+          </p>
+
+          <div class="hero__actions reveal" style="--i:3">
+            <a class="btn btn--solid" href="#projects">
+              查看项目
+              <svg class="btn__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </a>
+            <button class="btn btn--ghost" type="button" data-copy="hutao0806@qq.com">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="9" y="9" width="11" height="11" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+              </svg>
+              <span>hutao0806@qq.com</span>
+            </button>
+          </div>
+
+          <ul class="hero__meta reveal" style="--i:4">
+            <li>成都 · 中国</li>
+            <li>四川传媒学院 · 大一</li>
+            <li>2030 届</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal" style="--i:3">
+          <div class="terminal" aria-label="一份用 JavaScript 对象写成的个人简介">
+            <div class="terminal__bar">
+              <span class="terminal__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="terminal__file">profile.js</span>
+              <span class="terminal__lang">JavaScript</span>
+            </div>
+            <pre class="terminal__code"><code><span class="t-c">// 一个简短版本</span>
+<span class="t-k">const</span> <span class="t-v">mao</span> = {
+  <span class="t-p">school</span>:  <span class="t-s">"四川传媒学院"</span>,
+  <span class="t-p">major</span>:   <span class="t-s">"计算机系"</span>,
+  <span class="t-p">year</span>:    <span class="t-n">1</span>,
+  <span class="t-p">focus</span>:   [<span class="t-s">"game"</span>, <span class="t-s">"vr"</span>],
+  <span class="t-p">stack</span>:   [<span class="t-s">"C"</span>, <span class="t-s">"Python"</span>, <span class="t-s">"UE5"</span>],
+  <span class="t-p">now</span>:     <span class="t-s">"做一个 UE5 VR 项目"</span>,
+  <span class="t-p">openTo</span>:  <span class="t-s">"2027 暑期实习"</span>,
+};
+
+<span class="t-k">export default</span> <span class="t-v">mao</span>;</code></pre>
+            <div class="terminal__foot">
+              <span class="status"><i aria-hidden="true"></i>compiling…</span>
+              <span>UTF-8 · LF</span>
+            </div>
+          </div>
+          <p class="hero__caption">
+            <span>最后更新 · 2026.11</span>
+            <span>手写 HTML / CSS / JS</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- 滚动跑马灯（纯装饰） -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <div class="marquee__group">
+            <span>C</span><b>✳</b><span>Python</span><b>✳</b><span>UE5</span><b>✳</b>
+            <span>Blueprint</span><b>✳</b><span>VR</span><b>✳</b><span>HTML</span><b>✳</b>
+            <span>CSS</span><b>✳</b><span>JavaScript</span><b>✳</b><span>Linux</span><b>✳</b>
+            <span>Git</span><b>✳</b><span>数据结构</span><b>✳</b><span>英语</span><b>✳</b>
+          </div>
+          <div class="marquee__group">
+            <span>C</span><b>✳</b><span>Python</span><b>✳</b><span>UE5</span><b>✳</b>
+            <span>Blueprint</span><b>✳</b><span>VR</span><b>✳</b><span>HTML</span><b>✳</b>
+            <span>CSS</span><b>✳</b><span>JavaScript</span><b>✳</b><span>Linux</span><b>✳</b>
+            <span>Git</span><b>✳</b><span>数据结构</span><b>✳</b><span>英语</span><b>✳</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 关于 ===================== -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="section-head__num">01</span>
+          <h2>关于</h2>
+          <span class="section-head__en">About</span>
+        </div>
+
+        <div class="about">
+          <div class="about__main">
+            <p class="about__statement reveal">
+              把复杂拆开，<mark>直到它能被解释</mark>。
+            </p>
+            <p class="about__text reveal" style="--i:1">
+              我是毛祺浩，四川传媒学院计算机系大一学生。刚进大学，正在把 C、Python 和数学基础打牢；对「东西为什么能跑起来」好奇，从一行代码到一次 HTTP 请求，都想弄明白。
+            </p>
+            <p class="about__text reveal" style="--i:2">
+              同时我也在意东西好不好用。这个网站就是练习：没有框架，没有构建，只有三个文件；写它的过程，也是我学 HTML 和 CSS 的过程。
+            </p>
+            <p class="about__text reveal" style="--i:3">
+              最近开始在学 UE5，想把脑子里的场景做成一个能走进去的 VR 空间。还在很前面，但这件事让我愿意多花时间。
+            </p>
+          </div>
+
+          <aside class="profile reveal" style="--i:2">
+            <div class="profile__top">
+              <span class="profile__eyebrow">PROFILE / 2026</span>
+              <span class="profile__open"><i aria-hidden="true"></i>开放中</span>
+            </div>
+
+            <div class="profile__id">
+              <span class="profile__monogram" aria-hidden="true">MQH</span>
+              <div>
+                <p class="profile__name">毛祺浩</p>
+                <p class="profile__role">计算机系 · 2030 届</p>
+              </div>
+            </div>
+
+            <dl class="profile__facts">
+              <div><dt>所在地</dt><dd>成都，中国</dd></div>
+              <div><dt>在读</dt><dd>四川传媒学院 · 大一</dd></div>
+              <div><dt>方向</dt><dd>VR / Web</dd></div>
+              <div><dt>状态</dt><dd><span class="dot" aria-hidden="true"></span>寻找 2027 暑期实习</dd></div>
+              <div><dt>邮箱</dt><dd><a href="mailto:hutao0806@qq.com">hutao0806@qq.com</a></dd></div>
+            </dl>
+
+            <div class="profile__foot">
+              <span class="profile__barcode" aria-hidden="true"></span>
+              <span>CHENGDU · CN</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 经历 ===================== -->
+    <section class="section section--tight" id="experience">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="section-head__num">02</span>
+          <h2>经历</h2>
+          <span class="section-head__en">Education &amp; Experience</span>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline__item reveal">
+            <div class="timeline__when"><time datetime="2026-09">2026.09</time> — <time datetime="2030-06">2030.06</time></div>
+            <div class="timeline__body">
+              <h3>
+                <span class="timeline__logo timeline__logo--school" aria-hidden="true">川</span>
+                <span class="timeline__title">四川传媒学院 · 计算机系 <span class="tag tag--quiet">本科</span></span>
+              </h3>
+              <p class="timeline__meta">大一在读 · 2026 年入学</p>
+              <p>
+                刚入学，正在补数学、C 和 Python 的基础；课外自学 HTML/CSS 和 Linux，也在适应大学的节奏。
+              </p>
+              <ul class="chips" aria-label="在学内容">
+                <li>程序设计</li><li>高等数学</li><li>计算机基础</li><li>英语</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline__item reveal" style="--i:1">
+            <div class="timeline__when"><time datetime="2026-09">2026.09</time> — 至今</div>
+            <div class="timeline__body">
+              <h3>
+                <span class="timeline__logo timeline__logo--club" aria-hidden="true">自</span>
+                <span class="timeline__title">自学 · 个人练习</span>
+              </h3>
+              <p class="timeline__meta">HTML / CSS / JavaScript · Linux · UE5</p>
+              <p>
+                在写这个网站，也在补 C 和数据结构；最近开始学 UE5，做 VR 项目。项目还很小，先把每一步弄明白。
+              </p>
+              <ul class="chips" aria-label="练习内容">
+                <li>个人网站</li><li>UE5</li><li>VR</li><li>C</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 项目 ===================== -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="section-head__num">03</span>
+          <h2>项目</h2>
+          <span class="section-head__en">Learning &amp; Building</span>
+        </div>
+
+        <article class="featured reveal">
+          <div class="featured__content">
+            <div class="featured__top">
+              <span class="mono-label">01 / 2026</span>
+              <span class="badge"><i aria-hidden="true"></i>进行中</span>
+            </div>
+            <h3 class="featured__title">UE5 VR 开发</h3>
+            <p class="featured__sub">用 Unreal Engine 5 做一个 VR 项目</p>
+            <p class="featured__desc">
+              目前把精力放在这个项目上：在学 UE5 的 VR 开发，边学边做。先把场景、交互和蓝图逻辑跑通，做完再补过程记录。
+            </p>
+            <ul class="chips">
+              <li>Unreal Engine 5</li><li>Blueprint</li><li>VR</li><li>进行中</li>
+            </ul>
+            <div class="featured__links">
+              <a class="arrow-link" href="https://github.com/Lopzakel" target="_blank" rel="noopener noreferrer">
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="featured__visual">
+            <svg class="vr-art" viewBox="0 0 520 340" role="img" aria-label="UE5 VR 项目的头显线框示意">
+              <defs>
+                <radialGradient id="vrGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0" stop-color="#ff7141" stop-opacity=".2"/>
+                  <stop offset="1" stop-color="#ff7141" stop-opacity="0"/>
+                </radialGradient>
+                <pattern id="vrGrid" width="26" height="26" patternUnits="userSpaceOnUse">
+                  <path d="M26 0H0V26" fill="none" stroke="#2a2722" stroke-width=".7"/>
+                </pattern>
+              </defs>
+              <rect width="520" height="340" fill="#0e0d0a"/>
+              <rect width="520" height="340" fill="url(#vrGrid)" opacity=".65"/>
+              <ellipse cx="260" cy="154" rx="174" ry="112" fill="url(#vrGlow)"/>
+
+              <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+                <text x="24" y="32" fill="#7d7768" font-size="8" letter-spacing="1.6">UNREAL ENGINE 5</text>
+                <circle cx="468" cy="29" r="3" fill="#8fa08a"/>
+                <text x="498" y="32" text-anchor="end" fill="#8fa08a" font-size="7.5" letter-spacing="1.2">DEV</text>
+              </g>
+
+              <path d="M150 132C110 132 88 152 88 174C88 196 110 212 150 212" fill="none" stroke="#3b372f" stroke-width="10" stroke-linecap="round"/>
+              <path d="M370 132C410 132 432 152 432 174C432 196 410 212 370 212" fill="none" stroke="#3b372f" stroke-width="10" stroke-linecap="round"/>
+              <path d="M232 92C240 70 280 70 288 92" fill="none" stroke="#3b372f" stroke-width="9" stroke-linecap="round"/>
+
+              <rect x="146" y="92" width="228" height="124" rx="50" fill="#17160f" stroke="#4b463c" stroke-width="1.2"/>
+              <rect x="168" y="108" width="184" height="92" rx="38" fill="#090806" stroke="#2e2b25"/>
+              <path d="M236 202H284" stroke="#17160f" stroke-width="10" stroke-linecap="round"/>
+
+              <ellipse cx="222" cy="152" rx="38" ry="30" fill="#14120e" stroke="#ff7141" stroke-opacity=".82"/>
+              <ellipse cx="298" cy="152" rx="38" ry="30" fill="#14120e" stroke="#8fa08a" stroke-opacity=".6"/>
+              <ellipse cx="222" cy="152" rx="21" ry="16" fill="#ff7141" opacity=".09"/>
+              <ellipse cx="298" cy="152" rx="21" ry="16" fill="#8fa08a" opacity=".07"/>
+              <path d="M204 138C210 132 218 130 226 132" fill="none" stroke="#ff7141" stroke-opacity=".45" stroke-width="1.2"/>
+              <path d="M280 138C286 132 294 130 302 132" fill="none" stroke="#8fa08a" stroke-opacity=".35" stroke-width="1.2"/>
+              <circle cx="260" cy="114" r="3" fill="#ff7141"/>
+
+              <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+                <text x="24" y="316" fill="#7d7768" font-size="7.5" letter-spacing="1.4">ROOM-SCALE / IN PROGRESS</text>
+                <text x="496" y="316" text-anchor="end" fill="#ff7141" font-size="7.5" letter-spacing="1.4">01 / VR</text>
+                <text x="260" y="258" text-anchor="middle" fill="#4b463c" font-size="7" letter-spacing="2.6">MQH · 2026</text>
+              </g>
+            </svg>
+          </div>
+        </article>
+
+        <p class="projects__note reveal">现在只放一个项目，边做边补。</p>
+      </div>
+    </section>
+
+    <!-- ===================== 技能 ===================== -->
+    <section class="section section--tight" id="skills">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="section-head__num">04</span>
+          <h2>技能</h2>
+          <span class="section-head__en">Toolbox</span>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <h3>
+              <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>
+              语言 &amp; 基础
+            </h3>
+            <ul>
+              <li><span>C</span><i aria-hidden="true"></i><em>在学</em></li>
+              <li><span>Python</span><i aria-hidden="true"></i><em>在学</em></li>
+              <li><span>HTML / CSS</span><i aria-hidden="true"></i><em>在学</em></li>
+              <li><span>JavaScript</span><i aria-hidden="true"></i><em>在学</em></li>
+              <li><span>Markdown</span><i aria-hidden="true"></i><em>在用</em></li>
+              <li><span>英语</span><i aria-hidden="true"></i><em>长期</em></li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal" style="--i:1">
+            <h3>
+              <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h9M19 7h1M4 17h1M11 17h9"/><circle cx="16" cy="7" r="2.2"/><circle cx="8" cy="17" r="2.2"/></svg>
+              工具 &amp; 环境
+            </h3>
+            <ul>
+              <li><span>Unreal Engine 5</span><i aria-hidden="true"></i><em>在学</em></li>
+              <li><span>Blueprint</span><i aria-hidden="true"></i><em>在学</em></li>
+              <li><span>Linux</span><i aria-hidden="true"></i><em>入门</em></li>
+              <li><span>Git</span><i aria-hidden="true"></i><em>入门</em></li>
+              <li><span>VS Code</span><i aria-hidden="true"></i><em>日常</em></li>
+              <li><span>命令行</span><i aria-hidden="true"></i><em>入门</em></li>
+              <li><span>WSL</span><i aria-hidden="true"></i><em>入门</em></li>
+              <li><span>GitHub</span><i aria-hidden="true"></i><em>在用</em></li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal" style="--i:2">
+            <h3>
+              <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C10.5 5.2 8.7 4.5 6.5 4.5H4v13h2.5c2.2 0 4 .7 5.5 2 1.5-1.3 3.3-2 5.5-2H20v-13h-2.5c-2.2 0-4 .7-5.5 2Z"/><path d="M12 6.5v13"/></svg>
+              接下来
+            </h3>
+            <ul>
+              <li><span>数据结构</span><i aria-hidden="true"></i><em>计划中</em></li>
+              <li><span>算法</span><i aria-hidden="true"></i><em>计划中</em></li>
+              <li><span>数据库</span><i aria-hidden="true"></i><em>计划中</em></li>
+              <li><span>计算机网络</span><i aria-hidden="true"></i><em>计划中</em></li>
+              <li><span>编译原理</span><i aria-hidden="true"></i><em>想学</em></li>
+            </ul>
+            <p class="skill-note">先把 C、数学和 UE5 的基础打牢，再一点点往下学。不写「精通」——大部分东西只是刚起步。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 联系 ===================== -->
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="contact__head reveal">
+          <span class="section-head__num">05</span>
+          <span class="contact__zh">联系</span>
+          <span class="section-head__en">Get in touch</span>
+        </div>
+
+        <h2 class="contact__title reveal">聊聊<span class="contact__mark">？</span></h2>
+        <p class="contact__text reveal" style="--i:1">
+          有学习交流、项目想法，或者只是想聊聊，都欢迎写信给我。我通常会在一两天内回复。
+        </p>
+
+        <div class="contact__mail reveal" style="--i:2">
+          <a href="mailto:hutao0806@qq.com">hutao0806@qq.com</a>
+          <button class="copy-btn" type="button" data-copy="hutao0806@qq.com" aria-label="复制邮箱地址">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="11" height="11" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <span>复制</span>
+          </button>
+        </div>
+
+        <nav class="contact__links reveal" style="--i:3" aria-label="社交链接">
+          <a href="https://github.com/Lopzakel" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== 页脚 ===================== -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>© <span id="year">2026</span> 毛祺浩 · 手写于成都</p>
+      <p class="footer__time">成都时间 <time id="local-time">--:--</time></p>
+      <a class="footer__top" href="#top">回到顶部 <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
